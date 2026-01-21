@@ -1,0 +1,17 @@
+We want to fit a time series AR1 model: Y[t+1] ~ a(x) + B(x) * Y[t] + ϵ[t+1], where Y is a certain quantity we want to forecast, a(x) and B(x) are parameters we want to learn through NLP algorithms. These parameters aim to capture information from the transcripts. 
+
+a-Please first perform pre-processing on raw transcript texts and split into train/validation set (no testing is needed for this problem). 
+
+b- Construct a neural network with the following features: 
+1-	An input layer embeds the textual data
+2-	Two hidden, fully connected layers. 
+The first layer parameters have dimension E x 64, where E is the dimension of the embeddings of your choice. 
+The second layer parameters has dimension 64 x 16.
+Determine your own activation function and/or additional features (normalization, dropout, etc)
+3-	A final parameter layer contains a and B, which are parameters of the time series model. Dimension is therefore 16 x 2. 
+4-	The model should be trained using L2 loss  
+
+ 
+c-Then train the model for 5 epochs and plot the loss of training and validation sets. 
+
+
